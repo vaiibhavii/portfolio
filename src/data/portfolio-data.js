@@ -18,12 +18,12 @@ export const aboutMe = {
     "Currently, I'm deepening my expertise in data engineering—learning to build scalable data pipelines, implement ETL/ELT processes, and work with modern tools like Apache Spark and Airflow. My background in data analytics helps me approach engineering problems with an insight-first mindset.",
     "I'm passionate about hackathons, collaborative problem-solving, and building solutions that bridge the gap between complex data and actionable insights."
   ],
-  stats: [
-    { number: '2+', label: 'Years Building' },
-    { number: '3', label: 'Major Projects' },
-    { number: '10+', label: 'Certifications' },
-    { number: '2', label: 'IBM Internships' }
-  ]
+  // stats: [
+  //     // { number: '2+', label: 'Years Building' },
+  //     // { number: '3', label: 'Major Projects' },
+  //     // { number: '10+', label: 'Certifications' },
+  //     // { number: '2', label: 'IBM Internships' },
+  // ]
 };
 
 export const skills = {
@@ -45,7 +45,7 @@ export const projects = [
       'Production-grade infrastructure'
     ],
     status: 'Live',
-    link: '#' // Add your project URL
+    link: 'https://randomlyright.vercel.app/' // Add your project URL
   },
   {
     name: 'BillCraftr',
@@ -59,7 +59,7 @@ export const projects = [
       'Cross-device responsive design'
     ],
     status: 'Live',
-    link: '#' // Add your project URL
+    link: 'https://billcraftr.vercel.app/' // Add your project URL
   },
   {
     name: 'Stock Analysis Dashboard',
@@ -104,12 +104,12 @@ export const experience = [
 
 export const education = [
   {
-    degree: 'Master of Computer Applications',
+    degree: 'MCA -Master of Computer Applications',
     school: 'MES Institute of Management and Career Courses',
     year: '2024 – 2026'
   },
   {
-    degree: 'BBA - Computer Applications',
+    degree: 'BBA(CA) - Bachelor of Business Administration and Computer Applications',
     school: "St. Mira's College for Girls",
     year: '2021 – 2024'
   }

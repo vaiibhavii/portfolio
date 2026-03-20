@@ -34,9 +34,9 @@ export default function App() {
       {/* Navigation */}
       <nav className="nav">
         <div className="nav-logo">VK</div>
-        <div className="nav-links">
-          <a href="#work">Work</a>
+        <div className="nav-links">          
           <a href="#about">About</a>
+          <a href="#work">Work</a>
           <a href="#experience">Experience</a>
           <a href="#interests">Interests</a>
           <a href="#contact">Contact</a>
@@ -46,10 +46,10 @@ export default function App() {
       {/* Hero */}
       <section className="hero">
         <div className="hero-content">
-          <div className="hero-eyebrow">
-            <span className="dot"></span>
-            Available for opportunities
-          </div>
+          {/* <div className="hero-eyebrow">
+            <span className=""></span>
+            Nice to see you here!
+          </div> */}
           
           <h1 className="hero-title">
             <span className="hero-title-main">{personalInfo.name.split(' ')[0]}</span>
@@ -146,14 +146,14 @@ export default function App() {
           </div>
         </div>
 
-        <div className="about-stats">
+        {/* <div className="about-stats">
           {aboutMe.stats.map((stat, index) => (
             <div key={index} className="stat-card">
               <div className="stat-number">{stat.number}</div>
               <div className="stat-label">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
 
       {/* Work */}
