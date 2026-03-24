@@ -7,6 +7,7 @@ import {
   projects, 
   experience, 
   education, 
+  certifications,
   interests 
 } from './data/portfolio-data';
 import './App.css';
@@ -14,12 +15,21 @@ import './App.css';
 export default function App() {
   const [activeProject, setActiveProject] = useState(0);
   const [scrollY, setScrollY] = useState(0);
+  const [expandedInterests, setExpandedInterests] = useState({});
+  const [showAllCerts, setShowAllCerts] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleInterest = (index) => {
+  setExpandedInterests(prev => ({
+    ...prev,
+    [index]: !prev[index]
+  }));
+};
 
   const handleResumeDownload = () => {
     // This will download the resume.pdf from the public folder
@@ -252,34 +262,92 @@ export default function App() {
             ))}
           </div>
         </div>
+        <div className="certifications-section">
+  <h3 className="cert-title">
+    Certifications & Achievements
+    <span className="cert-count">{certifications.length}</span>
+  </h3>
+  
+  <div className="cert-grid">
+    {certifications.slice(0, showAllCerts ? certifications.length : 4).map((cert, index) => (
+      <div key={index} className="cert-card">
+        <div className="cert-header">
+          <span className="cert-provider">{cert.provider}</span>
+          <span className="cert-year">{cert.year}</span>
+        </div>
+        <h4 className="cert-name">{cert.name}</h4>
+        <span className="cert-category">{cert.category}</span>
+        {cert.description && (
+          <p className="cert-description">{cert.description}</p>
+        )}
+      </div>
+    ))}
+  </div>
+  
+  {certifications.length > 4 && (
+    <button 
+      className="show-more-certs"
+      onClick={() => setShowAllCerts(!showAllCerts)}
+    >
+      {showAllCerts ? 'Show Less' : `Show All ${certifications.length} Certifications`}
+    </button>
+  )}
+</div>
       </section>
 
       {/* Interests */}
       <section id="interests" className="interests">
-        <div className="section-header">
-          <span className="section-number">04</span>
-          <h2 className="section-title">Beyond Code</h2>
-        </div>
+  <div className="section-header">
+    <span className="section-number">04</span>
+    <h2 className="section-title">Beyond Code</h2>
+  </div>
 
-        <p className="interests-intro">
-          When I'm not building data pipelines or debugging code, you'll find me exploring
-          the world through different lenses—from nurturing plants to capturing moments.
-        </p>
+  <p className="interests-intro">
+    When I'm not building data pipelines or debugging code, you'll find me exploring
+    the world through different lenses—from nurturing plants to capturing moments.
+  </p>
 
-        <div className="interests-grid">
-          {interests.map((interest, index) => (
-            <div key={index} className={`interest-card ${interest.isLarge ? 'large' : ''}`}>
-              <div className="interest-icon">{interest.icon}</div>
-              <h3>{interest.title}</h3>
-              <p>{interest.description}</p>
+  <div className="interests-accordion">
+    {interests.map((interest, index) => (
+      <div 
+        key={index} 
+        className={`interest-item ${expandedInterests[index] ? 'expanded' : ''}`}
+      >
+        <div 
+          className="interest-header"
+          onClick={() => toggleInterest(index)}
+        >
+          <div className="interest-preview">
+            <div className="interest-image-wrapper">
+              <div className="interest-image-placeholder">
+                <span className="interest-icon-large">{interest.icon}</span>
+              </div>
             </div>
-          ))}
+            <div className="interest-info">
+              <h3>{interest.title}</h3>
+              <div className="interest-tags">
+                {interest.tags.map((tag, i) => (
+                  <span key={i} className="interest-tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <button className="interest-toggle">
+            {expandedInterests[index] ? '−' : '+'}
+          </button>
         </div>
+        
+        <div className="interest-content">
+          <p>{interest.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
 
-        <div className="interests-quote">
-          <p>"The best code is written by people who live full, curious lives."</p>
-        </div>
-      </section>
+  <div className="interests-quote">
+    <p>"The best code is written by people who live full, curious lives."</p>
+  </div>
+</section>
 
       {/* Contact */}
       <section id="contact" className="contact">

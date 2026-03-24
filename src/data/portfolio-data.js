@@ -115,41 +115,106 @@ export const education = [
   }
 ];
 
+export const certifications = [
+  {
+    provider: 'Coursera',
+    name: 'Professional Data Science Course',
+    year: '2025',
+    category: 'Data Science',
+    description: 'Data science concepts, methodologies, and tools, including data collection, cleaning, and wrangling; exploratory data analysis; data visualization; statistical analysis; machine learning model building and evaluation; and working with Python, SQL, Jupyter Notebooks, and real-world datasets.'
+  },
+  {
+    provider: 'IBM',
+    name: 'Project Management Fundamentals',
+    year: '2024',
+    category: 'Management',
+    description: 'Foundational project management skills, including planning, executing, and managing projects using key frameworks, processes, and deliverables across the full project lifecycle.'
+  },
+  {
+    provider: 'IBM',
+    name: 'Web Development Fundamentals',
+    year: '2024',
+    category: 'Development',
+    description: 'Comprehensive knowledge of web development, including building, testing, and deploying websites using HTML, CSS, and JavaScript, along with awareness of industry roles and required skills.'
+  },
+  {
+    provider: 'IBM',
+    name: 'Getting Started with Artificial Intelligence',
+    year: '2024',
+    category: 'AI/ML',
+    description: 'Foundational understanding of AI and generative AI, with practical experience in crafting and refining prompts using AI tools.'
+  },
+  {
+    provider: 'IBM',
+    name: 'Artificial Intelligence Fundamentals',
+    year: '2024',
+    category: 'AI/ML',
+    description: 'Foundational knowledge of AI concepts, tools, ethics, and real-world applications, along with awareness of industry roles and skills in the field.'
+  },
+  {
+    provider: 'Edureka',
+    name: 'Salesforce Administrator and App Builder Certification',
+    year: '2024',
+    category: 'Salesforce',
+    description: 'Understanding of Salesforce administration covering data modeling, security setup, automation processes, Sales Cloud and Service Cloud features, along with creating reports and dashboards and managing core platform components.'
+  },
+  {
+    provider: 'Edureka',
+    name: 'Salesforce Platform Developer 1 Certification',
+    year: '2024',
+    category: 'Salesforce',
+    description: 'Working knowledge of Salesforce application development, including writing business logic and building customized applications using Apex and Visualforce on the Force.com platform, with an understanding of platform capabilities and development practices.'
+  },
+  {
+    provider: 'DYDPU',
+    name: 'Hackathon 2025 Participant',
+    year: '2025',
+    category: 'Achievement',
+    description: 'Participated in the DYPDPU Hackathon (30+ hrs), gaining hands-on experience in developing solutions using emerging technologies such as Generative AI, AI/ML, Web/Blockchain, and IoT in a collaborative and time-constrained environment.'
+  }
+];
+
 export const interests = [
   {
     icon: '🌱',
     title: 'Gardening',
     description: "There's something deeply satisfying about watching seeds transform into thriving plants. My balcony garden is my happy place—from herbs to succulents, each plant teaches me patience and the beauty of slow, steady growth.",
-    isLarge: true
+    tags: ['Plants', 'Patience', 'Growth']
   },
   {
     icon: '📚',
     title: 'Reading',
-    description: 'Always have a book on the go. From tech blogs to fiction, reading fuels my curiosity and keeps my mind wandering to new ideas.'
+    description: 'Always have a book on the go. From tech blogs to fiction, reading fuels my curiosity and keeps my mind wandering to new ideas.',
+    tags: ['Books', 'Learning', 'Fiction']
   },
   {
     icon: '📸',
     title: 'Photography',
-    description: 'Capturing moments and finding beauty in everyday details. Every photo tells a story worth preserving.'
+    description: 'Capturing moments and finding beauty in everyday details. Every photo tells a story worth preserving.',
+    tags: ['Moments', 'Stories', 'Art']
   },
   {
     icon: '🎵',
     title: 'Music',
-    description: "Whether I'm playing an instrument or discovering new artists, music is my constant companion through code sessions and life."
+    description: "Whether I'm playing an instrument or discovering new artists, music is my constant companion through code sessions and life.",
+    tags: ['Instruments', 'Artists', 'Rhythm']
   },
   {
     icon: '✈️',
     title: 'Travel',
-    description: 'Exploring new places, cultures, and cuisines. Every trip is a chance to step outside my comfort zone and gain fresh perspectives.'
+    description: 'Exploring new places, cultures, and cuisines. Every trip is a chance to step outside my comfort zone and gain fresh perspectives.',
+    tags: ['Adventure', 'Cultures', 'Explore']
   },
   {
     icon: '🎨',
     title: 'Art & Design',
-    description: 'From UI inspiration to visual storytelling, I love exploring the intersection of aesthetics and functionality.'
+    description: 'From UI inspiration to visual storytelling, I love exploring the intersection of aesthetics and functionality.',
+    tags: ['Design', 'Aesthetics', 'Creativity']
   },
   {
     icon: '🍳',
     title: 'Cooking',
-    description: 'Experimenting with recipes and flavors. Cooking is like coding—creative problem-solving with delicious outcomes.'
+    description: 'Experimenting with recipes and flavors. Cooking is like coding—creative problem-solving with delicious outcomes.',
+    tags: ['Recipes', 'Flavors', 'Experiments']
   }
 ];
